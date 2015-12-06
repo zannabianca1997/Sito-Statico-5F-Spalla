@@ -1,0 +1,175 @@
+body, html {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1{ font-weight: 700; }
+h2{ font-weight: 400; }
+p { font-weight: 300; }
+
+#body-wrapper{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    /*overflow: hidden;*/
+}
+
+#body-wrapper .mosaic{
+    list-style: none;
+    padding:0;
+    margin:auto;
+    background: #3b3b3b;
+}
+
+.mosaic .student-card {
+    display: block;
+    float:left;
+    background-color:green;
+    overflow: hidden;
+    position: relative;
+}
+
+.mosaic .student-card,
+.mosaic .student-card .picture {
+    width: 150px;
+    height: 150px;
+}
+
+.mosaic .student-card .picture {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+    filter: grayscale(1) brightness(0.4); /* IE6-9 */
+    -webkit-filter: grayscale(1) brightness(0.4) ; /* Chrome 19+ & Safari 6+ */
+    background-size: cover;
+    transition: .5s;
+    -webkit-transition: .5s;
+}
+
+.mosaic .student-card .picture:hover{
+    filter: none;
+    -webkit-filter: grayscale(0);
+    transform: scale(1.05);
+}
+
+
+/*********************************************************************************/
+.student-box {
+    width: 100%;
+    height: 100%;
+}
+.student-box .picture-box,
+.student-box .info-box
+{
+    width:44%;
+    height:100%;
+    display: block;
+    position: relative;
+}
+
+.student-box .picture-box {
+    left:4%;
+   /* background:red;*/
+    float:left;
+}
+
+.student-box .info-box{
+    right:4%;
+   /* background:green;*/
+    float:right;
+}
+
+.student-box .separator{
+    right:50%;
+    background:black;
+    float:right;
+    display: block;
+    position: relative;
+    width:.3%;
+    height:70vh;
+    top:50%;
+    transform: translateY(-50%);
+}
+
+.student-box .info,
+.student-box .picture {
+    position: absolute;
+    left: 0;
+    top:50%;
+    transform: translateY(-50%);
+    height: 70vh;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 10px;
+    background-color: white;
+}
+
+.student-box .info {
+    /*background: blue;*/
+
+}
+.student-box .picture {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.student-box .info .name {
+    padding:0;
+    margin:0;
+    font-size: 6vmin;
+}
+
+.student-box .info .section {
+    padding:0;
+    margin:2vmin 0;
+    font-size: 4vmin;
+}
+
+.student-box .info .details {
+    padding:0;
+    margin:0;
+    font-size: 3vmin;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.student-box .info .footer {
+    padding:0;
+    margin:0;
+    font-size: 3vmin;
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+}
+
+@media (max-width: 750px){
+    .student-box .info-box,
+    .student-box .picture-box {
+        left: 0;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 10px;
+        background-color: white;
+        height: 100%;
+    }
+
+    .student-box .separator {
+        display: none;
+    }
+
+    .student-box .info,
+    .student-box .picture {
+        position: absolute;
+        height: 90vh;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 10px;
+        background-color: white;
+    }
+
+    .student-box .picture { height: 100vh; }
+
+    .student-box .info .name    { font-size: 9vmin; }
+    .student-box .info .section { font-size: 7vmin; }
+    .student-box .info .details,
+    .student-box .info .footer  { font-size: 6vmin; }
+}
