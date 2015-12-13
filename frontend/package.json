@@ -1,0 +1,22 @@
+{
+  "name": "annuario-frontend",
+  "version": "1.0.0",
+  "description": "Sito sviluppato con i ragazzi della 5F a scopo didattico\r Wrk in progress",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giowe/Sito-Statico-5F-Spalla.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/giowe/Sito-Statico-5F-Spalla/issues"
+  },
+  "homepage": "https://github.com/giowe/Sito-Statico-5F-Spalla#readme",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
