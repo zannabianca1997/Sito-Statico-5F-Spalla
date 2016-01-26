@@ -1,0 +1,18 @@
+{
+  "name": "Server",
+  "version": "0.0.1",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "express": "^4.13.3",
+    "jade": "^1.11.0",
+    "request": "^2.67.0"
+  }
+}
