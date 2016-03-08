@@ -47,10 +47,6 @@ gulp.task('watch', function(){
   gulp.watch('./src/fonts/**/*',  ['fonts']).on('change', browserSync.reload);;
 })
 
-gulp.task('browser-sync', function () {
-
-});
-
 gulp.task('build', ['clean', 'jade', 'css', 'js', 'fonts']);
 
 gulp.task('default', ['build', 'watch']);
