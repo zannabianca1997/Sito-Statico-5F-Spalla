@@ -41,10 +41,10 @@ gulp.task('watch', function(){
     notify: false
   });
 
-  gulp.watch('./src/views/**/*',  ['jade']).on('change', browserSync.reload);;
-  gulp.watch('./src/scripts/**/*',  ['js']).on('change', browserSync.reload);;
-  gulp.watch('./src/styles/**/*',  ['css']).on('change', browserSync.reload);;
-  gulp.watch('./src/fonts/**/*',  ['fonts']).on('change', browserSync.reload);;
+  gulp.watch('./src/views/**/*',  ['jade']).on('change', browserSync.reload);
+  gulp.watch('./src/scripts/**/*',  ['js']).on('change', browserSync.reload);
+  gulp.watch('./src/styles/**/*',  ['css']).on('change', browserSync.reload);
+  gulp.watch('./src/fonts/**/*',  ['fonts']).on('change', browserSync.reload);
 });
 
 gulp.task('build', ['clean', 'jade', 'css', 'js', 'fonts']);
