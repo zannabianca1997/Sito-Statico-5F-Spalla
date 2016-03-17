@@ -6,3 +6,7 @@ footer {
   background-color: black;
   color: white;
 }
+
+#logo {
+  max-height: 30px;
+}
