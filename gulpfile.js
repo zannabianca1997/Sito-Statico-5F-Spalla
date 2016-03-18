@@ -21,15 +21,15 @@ gulp.task('jade', function(){
 
 gulp.task('css', function(){
   gulp.src(['./src/styles/vendor/*.css', './src/styles/*.css'])
-    .pipe(cssnano())
     .pipe(concatCss('styles.css'))
+    .pipe(cssnano())
     .pipe(gulp.dest('./dist/styles/'));
 });
 
 gulp.task('js', function(){
   gulp.src(['./src/scripts/vendor/*.js', './src/scripts/*.js'])
-    .pipe(uglify())
     .pipe(concatJs('scripts.js'))
+    .pipe(uglify())
     .pipe(gulp.dest('./dist/scripts/'));
 });
 
