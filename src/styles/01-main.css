@@ -1,8 +1,12 @@
 body {
-  background-color: red;
+  background-color: white;
 }
 
 footer {
   background-color: black;
   color: white;
+}
+
+#logo {
+  max-height: 30px;
 }
